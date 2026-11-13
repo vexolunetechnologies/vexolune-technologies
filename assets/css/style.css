@@ -254,3 +254,10 @@ html[data-theme="light"] .checks li{color:#354b64}
 html[data-theme="light"] .contact-box p{color:#546a7e}
 html[data-theme="light"] .card-link{color:#195e81}
 @media(max-width:620px){.about-type-art{min-height:250px;padding:25px}.about-art-title{font-size:clamp(48px,12vw,66px)}.about-art-mark{font-size:64px}}
+
+/* ===== Accessibility and responsive finishing ===== */
+.skip-link{position:fixed;top:12px;left:12px;z-index:1000;padding:12px 16px;border-radius:10px;background:var(--bg);color:var(--text);border:2px solid var(--cyan);transform:translateY(-180%)}
+.skip-link:focus{transform:translateY(0)}
+:where(a,button):focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
+img{max-width:100%;height:auto}
+@media(max-width:620px){.contact-actions{flex-wrap:wrap}.contact-actions .btn{max-width:100%}.hero-copy,.feature-copy{min-width:0}}
