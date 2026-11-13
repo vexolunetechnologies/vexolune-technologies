@@ -93,6 +93,35 @@ html[data-theme="light"] .links.open{background:#fffffffa;border-color:#9eadd05c
 html[data-theme="light"] .links a{border-bottom-color:#8a9ec129}
 @media(max-width:620px){.nav-tools{margin-left:auto}.theme-toggle{padding:8px 10px;min-height:36px}.theme-label{display:none}.theme-icon{font-size:18px}}
 
+
+/* Soft-light refinement: reduce glare, saturation and high-contrast white surfaces */
+html[data-theme="light"]{--bg:#e9edf5;--panel:rgba(237,241,248,.86);--line:rgba(77,93,126,.18);--text:#29364c;--muted:#657189;--cyan:#347c92;--blue:#5874ad;--violet:#8274ac}
+html[data-theme="light"] body{background:#e9edf5;color:var(--text)}
+html[data-theme="light"] body:before{background:radial-gradient(ellipse at 8% 9%,rgba(166,201,213,.26),transparent 48%),radial-gradient(ellipse at 88% 26%,rgba(194,178,210,.25),transparent 52%),radial-gradient(ellipse at 48% 79%,rgba(181,203,211,.22),transparent 50%),linear-gradient(155deg,#e9eef4 0%,#e9eaf1 52%,#efe9ee 100%)}
+html[data-theme="light"] .nav{background:rgba(234,238,245,.88);border-bottom-color:#8292a52c}
+html[data-theme="light"] .brand,html[data-theme="light"] .links,html[data-theme="light"] .links a{color:#35435a}
+html[data-theme="light"] .nav-cta,html[data-theme="light"] .btn.secondary,html[data-theme="light"] .theme-toggle{background:#e2e8f0;color:#33455e;border-color:#9caabd70}
+html[data-theme="light"] .btn.primary{background:linear-gradient(110deg,#9ecad7,#b2b5df 66%,#c6b3d5);color:#233349;box-shadow:0 8px 24px #738eac26}
+html[data-theme="light"] .eyebrow{background:#dfe9ec;color:#3e7080;border-color:#a2bec3}
+html[data-theme="light"] .gradient{background-image:linear-gradient(105deg,#435a80 0%,#3f8193 34%,#6c6da2 68%,#95738f 100%)}
+html[data-theme="light"] .lead,html[data-theme="light"] .section-head p,html[data-theme="light"] .feature-copy p,html[data-theme="light"] .contact-box p{color:#667188}
+html[data-theme="light"] .card{background:linear-gradient(145deg,rgba(238,242,247,.96),rgba(230,235,243,.91));border-color:#a8b4c56b;box-shadow:0 14px 38px #66778d14}
+html[data-theme="light"] .card:hover{background:linear-gradient(145deg,#f0f3f7,#e5ebf2);border-color:#91a9bc}
+html[data-theme="light"] .product-card:first-child{background:radial-gradient(circle at 100% 0%,#cbd4e6a0,transparent 62%),linear-gradient(145deg,#e9eef5,#e4eaf3)}
+html[data-theme="light"] .card p{color:#67758a}
+html[data-theme="light"] .card-link{color:#3b7187}
+html[data-theme="light"] .tag{color:#607088;border-color:#a4afc57a}
+html[data-theme="light"] .iconbox{background:linear-gradient(135deg,#d4e6ea,#ded9e9);border-color:#afbac9}
+html[data-theme="light"] .feature-visual{background:radial-gradient(circle at 50% 42%,#d8dbe8,transparent 57%),linear-gradient(145deg,#e9edf3,#e1e8f0);border-color:#aab7c7}
+html[data-theme="light"] .contact-box{background:radial-gradient(ellipse at 100% 0%,#ded8e7,transparent 55%),linear-gradient(135deg,#edf0f5,#e2eaf1);border-color:#abb8c9;box-shadow:0 18px 48px #65748b18}
+html[data-theme="light"] .float-card{background:rgba(230,236,244,.94);border-color:#a7b5c8;color:#3a4a61;box-shadow:0 10px 28px #66768c21}
+html[data-theme="light"] .orb{opacity:.30;filter:blur(6px)}
+html[data-theme="light"] .orbit{border-color:#899eb057}
+html[data-theme="light"] .orbit.two{border-color:#ac9fbd55}
+html[data-theme="light"] .spark{background:#789ab4;box-shadow:0 0 9px #8ba6bd55}
+html[data-theme="light"] .backtop{background:#e4eaf2;color:#35465d;border-color:#a6b4c6}
+html[data-theme="light"] .links.open{background:#e8edf3;border-color:#abb9c9}
+
 </style>
 </head>
 <body>
@@ -105,7 +134,7 @@ html[data-theme="light"] .links a{border-bottom-color:#8a9ec129}
 <section id="contact"><div class="wrap"><div class="contact-box reveal"><div><div class="kicker">Have something in mind?</div><h2>Let’s make it <span class="gradient">real.</span></h2><p>Have a project idea, a collaboration in mind, or just want to connect? Send a message and tell us what you’re imagining.</p></div><div class="contact-actions"><a class="btn primary" href="mailto:shahzabahmed38@gmail.com">✉ Email us</a><a class="btn secondary" href="https://wa.me/923492432301" target="_blank" rel="noopener noreferrer">☏ WhatsApp</a><a class="btn secondary" href="https://github.com/vexolunetechnologies" target="_blank" rel="noopener noreferrer">⌘ GitHub ↗</a></div></div></div></section>
 </main><footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#home"><span class="logo logo-image" style="width:28px;height:28px;border-radius:9px"><img src="vexolune-technologies-logo.png" alt="" width="28" height="28"></span><span>VEXOLUNE<small>TECHNOLOGIES</small></span></a><span>© <span id="year"></span> Vexolune Technologies. Tomorrow, Engineered Today.</span><a href="#home">Back to top ↑</a></div></footer><button class="backtop" id="backtop" aria-label="Back to top">↑</button>
 <script>
-(function(){let choice='dark';try{choice=localStorage.getItem('vexolune-theme')||'dark'}catch(e){}if(choice!=='light')choice='dark';document.documentElement.dataset.theme=choice;const button=document.getElementById('theme-toggle');function sync(){const light=document.documentElement.dataset.theme==='light';button.setAttribute('aria-pressed',String(light));button.setAttribute('aria-label',light?'Switch to dark theme':'Switch to light theme');button.querySelector('.theme-icon').textContent=light?'☾':'☀';button.querySelector('.theme-label').textContent=light?'Dark':'Light';document.querySelector('meta[name="theme-color"]').setAttribute('content',light?'#f6f8ff':'#070914')}sync();button.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='light'?'dark':'light';document.documentElement.dataset.theme=next;try{localStorage.setItem('vexolune-theme',next)}catch(e){}sync()})})();
+(function(){let choice='dark';try{choice=localStorage.getItem('vexolune-theme')||'dark'}catch(e){}if(choice!=='light')choice='dark';document.documentElement.dataset.theme=choice;const button=document.getElementById('theme-toggle');function sync(){const light=document.documentElement.dataset.theme==='light';button.setAttribute('aria-pressed',String(light));button.setAttribute('aria-label',light?'Switch to dark theme':'Switch to light theme');button.querySelector('.theme-icon').textContent=light?'☾':'☀';button.querySelector('.theme-label').textContent=light?'Dark':'Light';document.querySelector('meta[name="theme-color"]').setAttribute('content',light?'#e9edf5':'#070914')}sync();button.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='light'?'dark':'light';document.documentElement.dataset.theme=next;try{localStorage.setItem('vexolune-theme',next)}catch(e){}sync()})})();
 const menu=document.getElementById('menu'),navlinks=document.getElementById('navlinks');menu.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));document.getElementById('year').textContent=new Date().getFullYear();const backtop=document.getElementById('backtop');window.addEventListener('scroll',()=>backtop.classList.toggle('show',window.scrollY>500),{passive:true});backtop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));const items=document.querySelectorAll('.reveal');if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});items.forEach(item=>observer.observe(item))}else items.forEach(item=>item.classList.add('visible'));
 </script>
 </body></html>
